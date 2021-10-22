@@ -9,12 +9,25 @@ body {
 	height: 100vh;
 	overflow: hidden;
 	margin: 0;
+	background: #aa4b6b; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to left,
+		#3b8d99,
+		#6b6b83,
+		#aa4b6b
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to left,
+		#3b8d99,
+		#6b6b83,
+		#aa4b6b
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .container {
 	display: flex;
 	/* flex-direction: column; */
-	width: 90vh;
+	width: 90vw;
 }
 
 .panel {
@@ -33,14 +46,18 @@ body {
 .panel h3 {
 	font-size: 24px;
 	position: absolute;
-	bottom: 20px;
-	left: 20px;
 	margin: 0;
 	opacity: 0;
+
+	/* Centering the h3 */
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, 0);
 }
 
 .panel.active {
 	flex: 5;
+	/* width: 50vw; */
 }
 
 .panel.active h3 {

@@ -7,9 +7,9 @@ const removeActiveClasses = function () {
 }
 
 panels.forEach((panel) => {
-    panel.addEventListener("click", function (element) {
+    panel.addEventListener("click", function () {
         removeActiveClasses();
-        element.target.classList.add("active");
+        panel.classList.add("active");
     })
 })
 
